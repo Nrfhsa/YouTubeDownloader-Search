@@ -1,4 +1,4 @@
-# Telegram Bot Downloader
+# Telegram YouTube Bot Downloader
 [Bahasa Indonesia](#bahasa-indonesia) | [English](#english)
 
 # English
