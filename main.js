@@ -7,7 +7,7 @@ const archiver = require('archiver');
 const cookiesPath = path.join(__dirname, 'cookies.txt');
 
 // Konfigurasi bot
-const token = "7355536746:AAHWuCdE-HKlcnuc_BiLWNKWQzqbzqDiFAU";
+const token = "MASUKAN TOKEN BOT ANDA YANG DIPEROLEH DARI BOT FATHER";
 const bot = new TelegramBot(token, { polling: true });
 
 // Handler Search
