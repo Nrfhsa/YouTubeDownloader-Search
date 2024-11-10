@@ -93,7 +93,7 @@ if (!fs.existsSync(downloadDir)) {
 // Mengecek ukuran file
 const getFileSizeInMB = (filePath) => {
     const stats = fs.statSync(filePath);
-    return stats.size / (1024 * 1024); // Mengonversi dari byte ke MB
+    return stats.size / (1024 * 1024);
 };
 
 // Fungsi untuk membuat file ZIP
@@ -477,7 +477,7 @@ const handlePlaylistZip = async (msg, match, format) => {
                 setTimeout(() => {
                     bersihkanFile(zipFilePath);
                     console.log(`File ZIP ${zipFilePath} telah dihapus karena terlalu besar untuk dikirim.`);
-                }, 5000);  // Tambahkan jeda 5 detik
+                }, 5000);
 
             } else {
                 // Kirim file ZIP jika ukurannya sesuai
@@ -580,7 +580,8 @@ bot.onText(/\/mp4 (.+)/, async (msg, match) => {
                 filename: `${info.title}.mp4`,
                 contentType: 'video/mp4'
             });
-
+            
+            console.log(`Video ${info.title} berhasil diunduh dan dikirim.`);
             bersihkanFile(outputPath);
             await bot.deleteMessage(chatId, pesanStatus.message_id);
         }
@@ -656,6 +657,7 @@ bot.onText(/\/mp3 (.+)/, async (msg, match) => {
                 contentType: 'audio/mp3'
             });
 
+            console.log(`Audio ${info.title} berhasil diunduh dan dikirim.`);
             bersihkanFile(outputPath);
             await bot.deleteMessage(chatId, pesanStatus.message_id);
         }
@@ -715,7 +717,8 @@ bot.onText(/\/webm (.+)/, async (msg, match) => {
                 filename: `${info.title}.webm`,
                 contentType: 'video/webm'
             });
-
+            
+            console.log(`Video ${info.title} berhasil diunduh dan dikirim.`);
             bersihkanFile(outputPath);
             await bot.deleteMessage(chatId, pesanStatus.message_id);
         }
