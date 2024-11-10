@@ -1,4 +1,4 @@
-# Telegram YouTube Bot Downloader
+# Telegram Bot Downloader
 [Bahasa Indonesia](#bahasa-indonesia) | [English](#english)
 
 # English
@@ -18,6 +18,13 @@ sudo apt install ffmpeg
 ```bash
 npm install
 ```
+
+## Getting YouTube Cookies
+1. Install "Get cookies.txt LOCALLY" extension from Chrome Web Store
+2. Log in to your YouTube account
+3. Click the extension icon while on YouTube
+4. Click "Export" to download cookies.txt
+5. Place the cookies.txt file in your bot's root directory
 
 ## Features
 - Single Media Download:
@@ -59,6 +66,13 @@ sudo apt install ffmpeg
 npm install
 ```
 
+## Mendapatkan Cookies YouTube
+1. Pasang ekstensi "Get cookies.txt LOCALLY" dari Chrome Web Store
+2. Masuk ke akun YouTube Anda
+3. Klik ikon ekstensi saat berada di YouTube
+4. Klik "Export" untuk mengunduh cookies.txt
+5. Letakkan file cookies.txt di direktori utama bot Anda
+
 ## Fitur
 - Unduh Media Tunggal:
   - MP3 (Audio)
@@ -74,7 +88,7 @@ npm install
 ⚠️ **Batasan Ukuran File Bot Telegram**
 - Ukuran file maksimum untuk pengiriman bot: 50MB
 - File yang melebihi 50MB tidak dapat dikirim melalui bot
-- Pertimbangkan menggunakan metode alternatif untuk file yang lebih besar 
+- Pertimbangkan menggunakan metode alternatif untuk file yang lebih besar
 
 ## Kontak
 Pembuat: [@aafhl_1](https://instagram.com/aafhl_1)
