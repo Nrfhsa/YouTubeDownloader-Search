@@ -27,6 +27,9 @@ npm install
 5. Place the cookies.txt file in your bot's root directory
 
 ## Features
+- YouTube Video Search:
+  - Search videos directly within Telegram
+  - Display complete video information
 - Single Media Download:
   - MP3 (Audio)
   - MP4 (Video)
@@ -74,6 +77,9 @@ npm install
 5. Letakkan file cookies.txt di direktori utama bot Anda
 
 ## Fitur
+- Pencarian Video YouTube:
+  - Mencari video langsung di dalam Telegram
+  - Menampilkan informasi lengkap video
 - Unduh Media Tunggal:
   - MP3 (Audio)
   - MP4 (Video)
