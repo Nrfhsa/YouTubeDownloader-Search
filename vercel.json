@@ -1,6 +1,21 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "env": {
+    "PYTHON_VERSION": "3.8"
+  },
+  "scripts": {
+    "build": "apt-get update && apt-get install -y python3 ffmpeg && npm install"
+  },
   "routes": [
-    { "src": "/api/bot", "dest": "/api/main.js" }
+    {
+      "src": "/api/bot",
+      "dest": "/api/main.js"
+    }
   ]
 }
