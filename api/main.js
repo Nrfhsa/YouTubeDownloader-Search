@@ -17,7 +17,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // URL publik untuk webhook Anda (ganti dengan URL Vercel Anda)
-const WEBHOOK_URL = 'https://your-vercel-deployment.vercel.app/api/bot';
+const WEBHOOK_URL = 'https://you-tube-downloader-search.vercel.app/api/bot';
 
 // Atur webhook
 bot.setWebHook(`${WEBHOOK_URL}/${token}`);

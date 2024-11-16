@@ -1,6 +1,6 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/api/bot", "dest": "/api/bot.js" }
+    { "src": "/api/bot", "dest": "/api/main.js" }
   ]
 }
