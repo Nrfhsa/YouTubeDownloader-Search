@@ -4,11 +4,40 @@ const ytSearch = require('yt-search')
 const fs = require('fs');
 const path = require('path');
 const archiver = require('archiver');
-const cookiesPath = path.join(__dirname, 'cookies.txt');
+const express = require('express');
+const bodyParser = require('body-parser');
+const cookiesPath = path.join(__dirname, 'config', 'cookies.txt');
 
 // Konfigurasi bot
 const token = "7355536746:AAHWuCdE-HKlcnuc_BiLWNKWQzqbzqDiFAU";
-const bot = new TelegramBot(token, { polling: true });
+const bot = new TelegramBot(token);
+
+// Inisialisasi Express
+const app = express();
+app.use(bodyParser.json());
+
+// URL publik untuk webhook Anda (ganti dengan URL Vercel Anda)
+const WEBHOOK_URL = 'https://your-vercel-deployment.vercel.app/api/bot';
+
+// Atur webhook
+bot.setWebHook(`${WEBHOOK_URL}/${token}`);
+
+// Endpoint untuk menerima update dari Telegram
+app.post(`/api/bot/${token}`, (req, res) => {
+    bot.processUpdate(req.body);
+    res.sendStatus(200);
+});
+
+// Tambahkan endpoint untuk verifikasi
+app.get('/', (req, res) => {
+    res.send('Bot sedang berjalan...');
+});
+
+// Jalankan server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server berjalan di port ${PORT}`);
+});
 
 // Handler Search
 bot.onText(/\/search (.+)/, async (msg, match) => {

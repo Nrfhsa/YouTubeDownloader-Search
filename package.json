@@ -4,10 +4,12 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js"
+    "start": "node api/main.js"
   },
   "dependencies": {
     "archiver": "^7.0.1",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
     "node-telegram-bot-api": "^0.61.0",
     "yt-dlp-exec": "^1.0.2",
     "yt-search": "^2.12.1"
